@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="euc-jp"?>
+<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Strict//EN" "http://www.w2.org/TR/xh
+tml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<!-- Header -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/top.css" type="text/css" />
+<title>ファイル階層</title>
+</head>
+
+<h1>ファイル階層</h1>
+
+<body>
+
+<table>
+	<tr><td>AZPR_RTL					</td><td>トップディレクトリ							</td></tr>
+	<tr><td>┣ top						</td><td>トップモジュール							</td></tr>
+	<tr><td>┃　┣ include				</td><td>インクルードファイル						</td></tr>
+	<tr><td>┃　┃　┣ global_config.h	</td><td>全体設定									</td></tr>
+	<tr><td>┃　┃　┣ nettype.h		</td><td>デフォルトネットタイプの指定				</td></tr>
+	<tr><td>┃　┃　┗ stddef.h			</td><td>共通のマクロ								</td></tr>
+	<tr><td>┃　┣ lib					</td><td>ライブラリファイル							</td></tr>
+	<tr><td>┃　┃　┣ x_s3e_dcm.v		</td><td>ザイリンクスDigital Clock Manager			</td></tr>
+	<tr><td>┃　┃　┣ x_s3e_dpram.v	</td><td>ザイリンクスメモリマクロ デュアルポートRAM	</td></tr>
+	<tr><td>┃　┃　┗ x_s3e_sprom.v	</td><td>ザイリンクスメモリマクロ シングルポートROM	</td></tr>
+	<tr><td>┃　┣ rtl					</td><td>RTLファイル								</td></tr>
+	<tr><td>┃　┃　┣ chip.v			</td><td>SoCトップモジュール						</td></tr>
+	<tr><td>┃　┃　┣ chip_top.v		</td><td>トップモジュール							</td></tr>
+	<tr><td>┃　┃　┗ clk_gen.v		</td><td>クロック生成モジュール						</td></tr>
+	<tr><td>┃　┗ test					</td><td>テストファイル								</td></tr>
+	<tr><td>┃　　　┣ chip_top_test.v	</td><td>テストベンチ								</td></tr>
+	<tr><td>┃　　　┣ sim.cmd			</td><td>シミュレーション用バッチファイル			</td></tr>
+	<tr><td>┃　　　┗ test.dat			</td><td>テストプログラム							</td></tr>
+	<tr><td>┣ cpu						</td><td>CPU										</td></tr>
+	<tr><td>┃　┣ include				</td><td>インクルードファイル						</td></tr>
+	<tr><td>┃　┃　┣ cpu.h			</td><td>CPUヘッダ									</td></tr>
+	<tr><td>┃　┃　┣ isa.h			</td><td>命令セットアーキテクチャ					</td></tr>
+	<tr><td>┃　┃　┗ spm.h			</td><td>スクラッチパッドメモリヘッダ				</td></tr>
+	<tr><td>┃　┗ rtl					</td><td>RTLファイル								</td></tr>
+	<tr><td>┃　　　┣ alu.v			</td><td>算術論理演算ユニット						</td></tr>
+	<tr><td>┃　　　┣ bus_if.v			</td><td>バスインタフェース							</td></tr>
+	<tr><td>┃　　　┣ cpu.v			</td><td>CPUトップモジュール						</td></tr>
+	<tr><td>┃　　　┣ ctrl.v			</td><td>CPU制御ユニット							</td></tr>
+	<tr><td>┃　　　┣ decoder.v		</td><td>命令デコーダ								</td></tr>
+	<tr><td>┃　　　┣ ex_reg.v			</td><td>EX/MEMパイプラインレジスタ					</td></tr>
+	<tr><td>┃　　　┣ ex_stage.v		</td><td>EXステージ									</td></tr>
+	<tr><td>┃　　　┣ gpr.v			</td><td>汎用レジスタ								</td></tr>
+	<tr><td>┃　　　┣ id_reg.v			</td><td>ID/EXパイプラインレジスタ					</td></tr>
+	<tr><td>┃　　　┣ id_stage.v		</td><td>IDステージ									</td></tr>
+	<tr><td>┃　　　┣ if_reg.v			</td><td>IF/IDパイプラインレジスタ					</td></tr>
+	<tr><td>┃　　　┣ if_stage.v		</td><td>IFステージ									</td></tr>
+	<tr><td>┃　　　┣ mem_ctrl.v		</td><td>メモリアクセス制御ユニット					</td></tr>
+	<tr><td>┃　　　┣ mem_reg.v		</td><td>MEM/WBパイプラインレジスタ					</td></tr>
+	<tr><td>┃　　　┣ mem_stage.v		</td><td>MEMステージ								</td></tr>
+	<tr><td>┃　　　┗ spm.v			</td><td>スクラッチパッドメモリ						</td></tr>
+	<tr><td>┣ bus						</td><td>バス										</td></tr>
+	<tr><td>┃　┣ include				</td><td>インクルードファイル						</td></tr>
+	<tr><td>┃　┃　┗ bus.v			</td><td>バスヘッダ									</td></tr>
+	<tr><td>┃　┗ rtl					</td><td>RTLファイル								</td></tr>
+	<tr><td>┃　　　┣ bus.v			</td><td>バストップモジュール						</td></tr>
+	<tr><td>┃　　　┣ bus_addr_dec.v	</td><td>アドレスデコーダ							</td></tr>
+	<tr><td>┃　　　┣ bus_arbiter.v	</td><td>バスアービタ								</td></tr>
+	<tr><td>┃　　　┣ bus_master_mux.v	</td><td>バスマスタマルチプレクサ					</td></tr>
+	<tr><td>┃　　　┗ bus_slave_mux.v	</td><td>バススレーブマルチプレクサ					</td></tr>
+	<tr><td>┗ io						</td><td>I/O										</td></tr>
+	<tr><td>　　┣ gpio					</td><td>GPIO										</td></tr>
+	<tr><td>　　┃　┣ include			</td><td>インクルードファイル						</td></tr>
+	<tr><td>　　┃　┃　┗ gpio.h		</td><td>GPIOヘッダ									</td></tr>
+	<tr><td>　　┃　┗ rtl				</td><td>RTLファイル								</td></tr>
+	<tr><td>　　┃　　　┗ gpio.v		</td><td>GPIO										</td></tr>
+	<tr><td>　　┣ rom					</td><td>Read Only Memory							</td></tr>
+	<tr><td>　　┃　┣ include			</td><td>インクルードファイル						</td></tr>
+	<tr><td>　　┃　┃　┗ rom.h		</td><td>ROMヘッダ									</td></tr>
+	<tr><td>　　┃　┗ rtl				</td><td>RTLファイル								</td></tr>
+	<tr><td>　　┃　　　┗ rom.v		</td><td>ROM										</td></tr>
+	<tr><td>　　┣ timer				</td><td>タイマ										</td></tr>
+	<tr><td>　　┃　┣ include			</td><td>インクルードファイル						</td></tr>
+	<tr><td>　　┃　┃　┗ timer.h		</td><td>タイマヘッダ								</td></tr>
+	<tr><td>　　┃　┗ rtl				</td><td>RTLファイル								</td></tr>
+	<tr><td>　　┃　　　┗timer.v		</td><td>タイマ										</td></tr>
+	<tr><td>　　┗ uart					</td><td>UART										</td></tr>
+	<tr><td>　　　　┣ include			</td><td>インクルードファイル						</td></tr>
+	<tr><td>　　　　┃　┗ uart.h		</td><td>UARTヘッダ									</td></tr>
+	<tr><td>　　　　┗ rtl				</td><td>RTLファイル								</td></tr>
+	<tr><td>　　　　　　┣ uart.v		</td><td>UARTトップモジュール						</td></tr>
+	<tr><td>　　　　　　┣ uart_ctrl.v	</td><td>UART制御モジュール							</td></tr>
+	<tr><td>　　　　　　┣ uart_rx.v	</td><td>UART受信モジュール							</td></tr>
+	<tr><td>　　　　　　┗ uart_tx.v	</td><td>UART送信モジュール							</td></tr>
+</table>
+
+</body>
+
+</html>

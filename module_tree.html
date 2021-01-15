@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="euc-jp"?>
+<!DOCTYPE html PUBLIC "-//W3C/DTD XHTML 1.0 Strict//EN" "http://www.w2.org/TR/xh
+tml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
+<!-- Header -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" href="css/top.css" type="text/css" />
+<title>モジュール階層</title>
+</head>
+
+<h1>モジュール階層</h1>
+
+<body>
+<table>
+	<tr><td>chip_top						</td><td>トップモジュール							</td></tr>
+	<tr><td>┣ clk_gen						</td><td>クロック生成モジュール						</td></tr>
+	<tr><td>┃　┗ x_s3e_dcm				</td><td>ザイリンクスDigital Clock Manager			</td></tr>
+	<tr><td>┗ chip							</td><td>SoCトップモジュール						</td></tr>
+	<tr><td>　　┣ cpu						</td><td>CPUトップモジュール						</td></tr>
+	<tr><td>　　┃　┣ if_stage				</td><td>IFステージ									</td></tr>
+	<tr><td>　　┃　┃　┣ bus_if			</td><td>バスインタフェース							</td></tr>
+	<tr><td>　　┃　┃　┗ if_reg			</td><td>IF/IDパイプラインレジスタ					</td></tr>
+	<tr><td>　　┃　┣ id_stage				</td><td>IDステージ									</td></tr>
+	<tr><td>　　┃　┃　┣ decoder			</td><td>命令デコーダ								</td></tr>
+	<tr><td>　　┃　┃　┗ id_reg			</td><td>ID/EXパイプラインレジスタ					</td></tr>
+	<tr><td>　　┃　┣ ex_stage				</td><td>EXステージ									</td></tr>
+	<tr><td>　　┃　┃　┣ alu				</td><td>算術論理演算ユニット						</td></tr>
+	<tr><td>　　┃　┃　┗ ex_reg			</td><td>EX/MEMパイプラインレジスタ					</td></tr>
+	<tr><td>　　┃　┣ mem_stage			</td><td>MEMステージ								</td></tr>
+	<tr><td>　　┃　┃　┣ bus_if			</td><td>バスインタフェース							</td></tr>
+	<tr><td>　　┃　┃　┣ mem_ctrl			</td><td>メモリアクセス制御ユニット					</td></tr>
+	<tr><td>　　┃　┃　┗ mem_reg			</td><td>MEM/WBパイプラインレジスタ					</td></tr>
+	<tr><td>　　┃　┣ ctrl					</td><td>CPU制御ユニット							</td></tr>
+	<tr><td>　　┃　┣ gpr					</td><td>汎用レジスタ								</td></tr>
+	<tr><td>　　┃　┗ spm					</td><td>スクラッチパッドメモリ						</td></tr>
+	<tr><td>　　┃　　　┗ x_dp_ram_x32		</td><td>ザイリンクスメモリマクロ デュアルポートRAM	</td></tr>
+	<tr><td>　　┣ rom						</td><td>ROM										</td></tr>
+	<tr><td>　　┃　┗ x_sp_rom_x32			</td><td>ザイリンクスメモリマクロ シングルポートROM	</td></tr>
+	<tr><td>　　┣ timer					</td><td>タイマ										</td></tr>
+	<tr><td>　　┣ uart						</td><td>UARTトップモジュール						</td></tr>
+	<tr><td>　　┃　┣ uart_tx				</td><td>UART送信モジュール							</td></tr>
+	<tr><td>　　┃　┣ uart_rx				</td><td>UART受信モジュール							</td></tr>
+	<tr><td>　　┃　┗ uart_ctrl			</td><td>UART制御モジュール							</td></tr>
+	<tr><td>　　┣ gpio						</td><td>GPIO										</td></tr>
+	<tr><td>　　┗ bus						</td><td>バストップモジュール						</td></tr>
+	<tr><td>　　　　┣ bus_addr_dec			</td><td>アドレスデコーダ							</td></tr>
+	<tr><td>　　　　┣ bus_arbiter			</td><td>バスアービタ								</td></tr>
+	<tr><td>　　　　┣ bus_master_mux		</td><td>バスマスタマルチプレクサ					</td></tr>
+	<tr><td>　　　　┗ bus_slave_mux		</td><td>バススレーブマルチプレクサ					</td></tr>
+</table>
+
+</body>
+
+</html>
